@@ -49,4 +49,7 @@ public class Justificacion {
     @ToString.Exclude
     private Carrera carrera;
 
+    public void setEstado(@NotNull(message = "El estado no puede ser nulo") EstadoJustificacion estado) {
+        this.estado = estado;
+    }
 }

@@ -22,8 +22,8 @@ public class JustificacionService {
         return repository.findAll();
     }
 
-    public Optional<Justificacion> findById(Long id) {
-        return repository.findById(id);
+    public Justificacion findById(Long id) {
+        return repository.findById(id).get();
     }
 
     public Justificacion update(Justificacion justificacion) {
