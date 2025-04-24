@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.inclCapitalContable.btnCalcularCapital.setOnClickListener() {
             val activos = binding.inclCapitalContable.etActivosTotales.text.toString().toDouble()
             val pasivos = binding.inclCapitalContable.etPasivosTotales.text.toString().toDouble()
-            val capital = "C$ " + ".2f".format(calcularCapital(activos, pasivos).toString())
+            val capital = "C$ %.2f".format(calcularCapital(activos, pasivos))
             binding.inclCapitalContable.tvCapitalContable.text = capital
         }
 
@@ -34,15 +34,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.inclIvaProducto.btnCalcularIVA.setOnClickListener() {
             val price = binding.inclIvaProducto.etPrecioProducto.text.toString().toDouble()
-            val iva = "IVA: C$ .2f".format(calcularIVA(price).toString())
-            val priceWithIVA = "Precio con IVA aplicado: C$ .2f".format(calcularPrecioConIVA(price, calcularIVA(price)).toString())
+            val iva = "IVA: C$ %.2f".format(calcularIVA(price))
+            val priceWithIVA = "Precio con IVA aplicado: C$ %.2f".format(calcularPrecioConIVA(price, calcularIVA(price)))
             binding.inclIvaProducto.tvResultadoIVA.text = iva
             binding.inclIvaProducto.tvPrecioConIVA.text = priceWithIVA
         }
 
         binding.inclInssEmpleado.btnCalcularINSS.setOnClickListener() {
             val salary = binding.inclInssEmpleado.etSalario.text.toString().toDouble()
-            val inss = "C$ .2f".format(calcularINSS(salary).toString())
+            val inss = "C$ %.2f".format(calcularINSS(salary))
             binding.inclInssEmpleado.tvResultadoINSS.text = inss
         }
 
