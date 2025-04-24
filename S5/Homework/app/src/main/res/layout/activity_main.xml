@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <include
+                android:id="@+id/inclCapitalContable"
+                layout="@layout/layout_capital_contable" />
+        <include
+                android:id="@+id/inclNotaFinal"
+                layout="@layout/layout_nota_final"
+        />
+        <include
+                android:id="@+id/inclIvaProducto"
+                layout="@layout/layout_iva_producto"
+        />
+        <include
+                android:id="@+id/inclInssEmpleado"
+                layout="@layout/layout_inss_empleado"
+        />
+        <include
+                android:id="@+id/inclCantidadLetrasFrase"
+                layout="@layout/layout_cantidad_letras_frase"
+        />
+    </LinearLayout>
+
+</ScrollView>

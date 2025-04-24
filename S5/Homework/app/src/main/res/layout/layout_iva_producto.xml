@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+    <TextView
+            android:id="@+id/tvTituloIVA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cálculo del IVA (15%)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+            android:id="@+id/etPrecioProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el precio del producto C$"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloIVA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+            android:id="@+id/btnCalcularIVA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular IVA"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etPrecioProducto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/tvResultadoIVA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCalcularIVA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    <TextView
+            android:id="@+id/tvPrecioConIVA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvResultadoIVA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

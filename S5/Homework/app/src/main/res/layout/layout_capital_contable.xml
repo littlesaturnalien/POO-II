@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/tvActivosTotales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activos Totales"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/etActivosTotales"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/etActivosTotales"
+              android:layout_marginHorizontal="30sp"
+              android:inputType="numberDecimal"
+              android:hint="C$ (Córdobas)"
+              app:layout_constraintTop_toBottomOf="@+id/tvActivosTotales"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/tvPasivosTotales"
+    />
+    <TextView
+            android:id="@+id/tvPasivosTotales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pasivos Totales"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/etActivosTotales"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etPasivosTotales"
+    />
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/etPasivosTotales"
+              android:layout_marginHorizontal="30sp"
+              android:inputType="numberDecimal"
+              android:hint="C$ (Córdobas)"
+              app:layout_constraintTop_toBottomOf="@+id/tvPasivosTotales"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintBottom_toTopOf="@+id/btnCalcularCapital"
+    />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/btnCalcularCapital"
+            android:text="Calcular Capital Contable"
+            android:layout_marginHorizontal="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/etPasivosTotales"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvCapitalContable"
+    />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/tvCapitalContable"
+              android:text=""
+              android:layout_marginHorizontal="30sp"
+              app:layout_constraintTop_toBottomOf="@+id/btnCalcularCapital"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
