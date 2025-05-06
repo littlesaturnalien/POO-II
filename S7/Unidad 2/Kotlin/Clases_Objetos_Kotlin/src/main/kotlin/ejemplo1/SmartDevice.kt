@@ -1,3 +1,5 @@
+package ejemplo1
+
 open class SmartDevice(val name: String, val category: String) {
 
     var deviceStatus = "online"

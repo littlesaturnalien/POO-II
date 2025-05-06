@@ -1,3 +1,5 @@
+package ejemplo1
+
 class SmartHome(
     val smartTvDevice: SmartTvDevice,
     val smartLightDevice: SmartLightDevice

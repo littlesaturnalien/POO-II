@@ -1,7 +1,11 @@
+package ejemplo1
+
 fun main() {
 
-    var smartHome : SmartHome = SmartHome(SmartTvDevice("Android TV", "Entertainment"),
-        SmartLightDevice("Google Light", "Utility"))
+    var smartHome : SmartHome = SmartHome(
+        SmartTvDevice("Android TV", "Entertainment"),
+        SmartLightDevice("Google Light", "Utility")
+    )
 
     smartHome.printSmartTvInfo()
     smartHome.printSmartLightInfo()

@@ -1,3 +1,5 @@
+package ejemplo1
+
 class SmartTvDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
 
