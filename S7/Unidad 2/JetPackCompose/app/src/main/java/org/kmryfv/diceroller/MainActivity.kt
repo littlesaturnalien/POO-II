@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun DiceRollerApp() {
     DiceWithButtonAndImage(modifier = Modifier.fillMaxSize().wrapContentSize(Alignment.Center))
