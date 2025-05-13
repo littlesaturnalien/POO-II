@@ -44,4 +44,25 @@ public class Estudiante {
     @Size(max = 2, message = "Un estudiante no puede llevar más de 2 carreras")
     @ToString.Exclude
     private Set<Carrera> carreras = new HashSet<>();
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", cif='" + cif + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", carreras=" + getAllCarreras() +
+                '}';
+    }
+
+    public String getAllCarreras(){
+        String carreras = "";
+        for (Carrera carrera : this.carreras){
+            carreras += carrera.getNombre() + "\n";
+        }
+        return carreras;
+    }
 }
